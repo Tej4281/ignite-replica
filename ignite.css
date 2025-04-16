@@ -52,13 +52,21 @@ body {
   position: fixed;
   bottom: 0;
   left: 0;
-  width: 99%!important;
+  width: 100%!important;
   z-index: 222;
   background-color: rgb(0 0 0 / 0.2);
   padding: 30px;
   border-top: 1px solid rgba(255, 255, 255, 0.2);
 }
-
+.row {
+  --bs-gutter-x: 1.5rem;
+  --bs-gutter-y: 0;
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: calc(var(--bs-gutter-y) * -1);
+  margin-right: calc(var(--bs-gutter-x) * -.0);
+  margin-left: calc(var(--bs-gutter-x) * -.5);
+}
 .carousel-indicators {
   position: absolute;
   right: 0;
@@ -78,8 +86,8 @@ body {
   position: absolute;
   top: 25%;
   bottom: auto;
-  padding-left: 0px!important;
-  padding-right: 0px!important;
+  padding-left: 10px!important;
+  padding-right: 5px!important;
 }
 
 .main-tag{
@@ -416,8 +424,17 @@ a:hover {
   font-size: 16px;
 }
 
-
-
+.container, .container-fluid, .container-lg, .container-md, .container-sm, .container-xl, .container-xxl {
+  width: 100%;
+  padding-right: var(--bs-gutter-x,.0rem);
+  padding-left: var(--bs-gutter-x,.0rem);
+  margin-right: auto;
+  margin-left: auto;
+}
+.hover-img-sec{
+  height: 100vh!important;
+  width: 100%;
+}
 .skill-bars {
   /* padding: 25px 30px; */
   width: 550px;
